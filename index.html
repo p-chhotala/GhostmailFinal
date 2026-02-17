@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Temp-Mail</title>
+
+    <script src="https://kit.fontawesome.com/2b2869e88a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script2.js"></script>
+</head>
+
+<body>
+    <nav class="HeadBar" >
+        <div class="Logo" style="display: flex; align-items: center;">
+            <img style="width: 40px; height: 40px; padding-right: 7px;" src="logo1.png">
+            <p style="color: #61e6c7;">Ghost</p>
+            <p style="color: #ffffff;">Mail</p>
+        </div>
+        <!--
+        <div>
+            <button class="Btnmii">#Made in India</button>
+        </div>
+        -->
+    </nav>
+
+    <hr style="width: 100%; height: 2px;">
+    <main style="max-width: 42rem; width: 100%;">
+        <div class="MailPro">
+            <div style="margin-bottom: 1.5rem;">
+                <p>CURRENT INBOX</p>
+                <div class="InC">
+                    <input id="emailInput" type="text" readonly value="5rl057vueg@1secmail.net">
+                    <button onclick="copyText()" class="Copy copy-btn">
+                        <i class="fa-solid fa-copy" style="color: #ffffff;"></i>
+                        COPY
+                    </button>
+                </div>
+            </div>
+            <div class="AutoR">
+                    <i class="fa-solid fa-circle-check animate-pulse" style="color: #10b981; font-size: 12px;"></i>
+                    Auto-refreshing for new messages...
+            </div>
+        </div>
+        <div class="AdSlot"> 
+            <p> ADVERTISEMENT SPACE </p>
+        </div>
+
+        <div class="Inbox">
+            <div class="TitleBar">
+                <h3>
+                    <i class="fa-solid fa-inbox" style="color: #2563eb;"></i> 
+                    INBOX
+                </h3>
+                <span id="msg-count" class="Counter">0</span>
+            </div>
+
+            <div class="Massages">
+                <i class="fa-solid fa-ghost fa-bounce" style="color: #60a5fa; font-size: 2rem;"></i>
+                <p>Waiting For Masseges !</p>
+            </div>
+        </div>
+
+        <div class="AdSlot"> 
+            <p> ADVERTISEMENT SPACE </p>
+        </div>
+   </main>
+</body>
+</html>

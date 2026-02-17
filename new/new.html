@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Temp-Mail</title>
+
+    <script src="https://kit.fontawesome.com/2b2869e88a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+    
+    <nav class="HeadBar" >
+        <div style="gap: 0.75rem; align-items: center; display: flex; margin-bottom: 1.5rem;">
+            <!-- <div class="Logo"> -->
+                <i class="fa-solid fa-ghost" style="color: rgba(116, 192, 252, 1); font-size: 1.8rem;"></i>
+                <span style="font-family: Space Grotesk, sans-serif; color: #ffffff; font-size: 1.5rem; letter-spacing: 0.5rem;" class="text-2xl font-bold tracking-tighter">
+                    GHOST
+                    <span style=" color: rgba(116, 192, 252, 1);">
+                        MAIL
+                    </span>
+                </span>
+            <!-- </div> -->
+        </div>
+        <div></div>
+    </nav>
+
+    <!--Horizontal line--><hr>
+
+    <main style="max-width: 42rem; width: 100%;">
+        <!-- E-mail provider-->
+        <div class="MailPro">
+            <div style="margin-bottom: 1rem;">
+                <div class="title">CURRENT INBOX</div>
+                <div class="InC">
+                    <div style="display: flex; flex-grow: 1; border: 1px solid; border-radius: 0.75rem; --tw-border-opacity: 1; border-color: rgb(51 65 85 / var(--tw-border-opacity, 1));">
+                    <input id="emailInput" type="text" readonly value="5rl057vueg@1secmail.net">
+                    </div>
+                    <button onclick="copyText()" class="Copy copy-btn">
+                        <i class="fa-solid fa-copy" style="color: #ffffff;"></i>
+                        COPY
+                    </button>
+                </div>
+            </div>
+            <!-- <div class="AutoR">
+                    <i class="fa-solid fa-circle-check animate-pulse" style="color: #10b981; font-size: 12px;"></i>
+                    Auto-refreshing for new messages...
+            </div> -->
+        </div>
+
+        <!-- Ad-slot -->
+        <div class="AdSlot"> 
+            <p> ADVERTISEMENT SPACE </p>
+        </div>
+
+        <!-- inbox -->
+        <div class="Inbox">
+            <div class="TitleBar">
+                <h3>
+                    <i class="fa-solid fa-inbox" style="color: #2563eb;"></i> 
+                    INBOX
+                </h3>
+                <span id="msg-count" class="Counter">0</span>
+            </div>
+
+            <div class="Massages">
+                <!-- <i class="fa-solid fa-crow fa-spin fa-2xl" style="margin-bottom: 1rem; color: rgba(37, 99, 235, 1.00);"></i> -->
+                <i class="fa-solid fa-crow fa-2xl" style="color: #60a5fa; font-size: 2rem; padding-bottom: 1rem;"></i>
+                <p>Caww caw…! Nothing Here.</p>
+            </div>
+        </div>
+
+        <!--Ad-slot -->
+        <div class="AdSlot"> 
+            <p> ADVERTISEMENT SPACE </p>
+        </div>
+   </main>
+</body>
+</html>

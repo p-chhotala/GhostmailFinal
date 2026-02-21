@@ -74,16 +74,13 @@ hr{
 input{
     width: 100%;
     background-color: rgb(15 23 42 / 0.8);
-    border-width: 1px;
     --tw-border-opacity: 0;
     border-color: rgb(51 65 85 / var(--tw-border-opacity, 1));
-    padding: 1rem;
+    padding: 12px 15px;
     border-radius: 0.75rem;
-    --tw-text-opacity: 1;
-    color: rgb(96 165 250 / var(--tw-text-opacity, 1));
+    color: rgb(96, 165, 250);
     font-family: 'JetBrains Mono', monospace;
     font-size: 100%;
-    line-height: 1.75rem;
     /* outline: 2px solid transparent;
     outline-offset: 2px;
     transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
@@ -202,6 +199,7 @@ h3{
     }
     input{
         font-size: 1.25rem;
+        padding: 1rem;
     }
 }
 

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono&display=swap');
+
+* {box-sizing: border-box;}
+
+:root {
+    --primary: #3b82f6;
+}
+
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #0f172a;
+    color: #f1f5f9;
+    /* overflow-x: hidden;*/
+}
+
+.glass-panel {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+}
+
+.glass-card {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+}
+.flex{display: flex;}
+.flex-col {flex-direction: column;}
+
+.min-h-screen {min-height: 100vh;}
+.max-w-56{max-width: 56rem;}
+.w-full{width: 100%;}
+
+
+.items-center {align-items: center;}
+.justify-between {justify-content: space-between;}
+
+.mb-2p5{margin-bottom: 2.5rem;}
+.pa-x2{padding-top: 2rem; padding-bottom: 2rem;}
+.pa-y1{padding-left: 1rem; padding-right: 2rem;}
+
+.jetbmono { font-family: 'JetBrains Mono', monospace;}
+
+.ad-slot {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    color: #475569;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+    .sm\:block {
+        display: block
+    }
+
+    .sm\:hidden {
+        display: none
+    }
+}
+
+@media (min-width: 768px) {
+    .md\:col-span-2 {
+        grid-column: span 2 / span 2
+    }
+
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .md\:flex-row {
+        flex-direction: row
+    }
+
+    .md\:p-8 {
+        padding: 2rem
+    }
+
+    .md\:text-base {
+        font-size: 1rem;
+        line-height: 1.5rem
+    }
+
+    .md\:text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem
+    }
+}

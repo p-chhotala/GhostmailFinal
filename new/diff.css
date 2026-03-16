@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=JetBrains+Mono&display=swap');
 
-* {box-sizing: border-box;}
+*, ::after, ::before {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
 
 :root {
     --primary: #3b82f6;
@@ -14,6 +19,10 @@ body {
     /* overflow-x: hidden;*/
 }
 
+blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+    margin: 0;
+}
+
 .glass-panel {
     background: rgba(30, 41, 59, 0.6);
     backdrop-filter: blur(20px);
@@ -21,28 +30,83 @@ body {
     border-radius: 24px;
 }
 
+
 .glass-card {
     background: rgba(30, 41, 59, 0.4);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
 }
+
+hr{
+    width: 100%; 
+    height: 2px;
+    margin-bottom:2rem;
+    padding: 0;
+    border: 0;
+    background-color: #131b2e;
+    font-size: 1px;
+    border-radius: 1px;
+}
+
 .flex{display: flex;}
 .flex-col {flex-direction: column;}
+.flex-grow {flex-grow: 1;}
 
 .min-h-screen {min-height: 100vh;}
 .max-w-56{max-width: 56rem;}
+.max-w-42{max-width: 42rem;}
 .w-full{width: 100%;}
 
 
 .items-center {align-items: center;}
 .justify-between {justify-content: space-between;}
+.justify-center {justify-content: center;}
 
-.mb-2p5{margin-bottom: 2.5rem;}
+.mb-2{margin-bottom: 2rem;}
+.mb-1p5{margin-bottom: 1.5rem;}
+.mb-p75{margin-bottom: 0.75rem;}
+
 .pa-x2{padding-top: 2rem; padding-bottom: 2rem;}
-.pa-y1{padding-left: 1rem; padding-right: 2rem;}
+.pa-y1{padding-left: 1rem; padding-right: 1rem;}
+.pa-1{padding: 1rem;}
+.pa-1p5{padding: 1.5rem;}
+
+.gap-p75{gap: 0.75rem;}
+.gap-1{gap: 1rem;}
+.gap-p5{gap: 0.5rem;}
+
+.relative {position: relative;}
+.overflow-hidden {overflow: hidden;}
 
 .jetbmono { font-family: 'JetBrains Mono', monospace;}
+.letter-space-1{letter-spacing: 0.1em;}
+.text-white{color: #ffffff;}
+.font-b700{font-weight: 700;}
+.font-grey-sp75{
+    color: rgb(148 163 184); 
+    font-size: 0.75rem;
+}
+.text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: rgb(96 165 250);
+}
+.bg-slate-dblue{
+    background-color: rgb(15 23 42 / 0.8);
+}
+.bg-slate-lblue {
+    background-color: rgb(37 99 235);
+}
+
+.border-grey {
+    border:1px solid rgb(51 65 85);
+}
+.bradius-p75 {
+    border-radius: 0.75rem;
+}
+
+
 
 .ad-slot {
     background: rgba(255, 255, 255, 0.02);
@@ -55,6 +119,23 @@ body {
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+[role=button], button {
+    cursor: pointer;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 @media (min-width: 640px) {
@@ -80,7 +161,7 @@ body {
         flex-direction: row
     }
 
-    .md\:p-8 {
+    .md\:pa-2 {
         padding: 2rem
     }
 

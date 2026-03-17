@@ -12,10 +12,10 @@
 
 <body class="flex flex-col min-h-screen pa-x2 pa-y1 items-center">
     <nav class="max-w-56 flex items-center mb-2">
-        <div class="flex items-center gap-3 items-center">
-            <span style="font-family: Space Grotesk, sans-serif; color: #ffffff; font-size: 1.5rem; letter-spacing: 0.5rem;">
-                GHOST
-                    <i class="fa-solid fa-ghost" style="color: rgba(116, 192, 252, 1); font-size: 1.8rem;"></i>
+        <div class="flex items-center gap-p75">
+            <i class="fa-solid fa-ghost" style="color: rgba(116, 192, 252, 1); font-size: 1.8rem;"></i>
+            <span class="text-white letter-space-p5 font-size-1p5 font-b700">
+                GHOST~
                     <span style=" color: rgba(116, 192, 252, 1);">
                         MAIL
                     </span>
@@ -26,122 +26,65 @@
     <hr>
 
     <main class="w-full max-w-42 relative">
-        <!-- E-mail provider-->
-        <div class="glass-panel pa-1p5 md:pa-2 mb-1p5 relative overflow-hidden">
-            <div class="mb-1p5">
-                <h2 class="font-grey-sp75 font-b700 letter-space-1 mb-p75 flex items-center gap-p5">
-                    <i class="fa-regular fa-id-badge"></i>YOUR TEMPORARY E-MAIL
-                </h2>
-                <div class="flex flex-col md:flex-row gap-p75">
-                    <div class="relative flex-grow group">
-                        <input type="text" id="email-field" readonly="" class="w-full bg-slate-dblue pa-1 border-grey bradius-p75 jetbmono text-lg md:text-xl" value="dbe5uyu4pb@1secmail.com">
-                    </div>
-                    <button onclick="copyToClipboard()" id="copy-btn" class="bg-slate-lblue text-white font-b700 pa-x2 pa-y1 bradius-p75 flex items-center justify-center gap-p5 active:scale-95">
-                        <i class="fa-regular fa-copy"></i> COPY
-                    </button>
-                </div>
-            </div>
-            <div class="flex justify-between items-end border-t border-white/5 pt-4">
-                <div class="flex items-center gap-2 text-xs text-slate-500">
-                    <i class="fa-solid fa-circle-check text-green-500"></i>
-                    Auto-refreshing every 5s
-                </div>
-                <button onclick="manualRefresh()" id="refresh-btn" class="text-xs text-slate-400 hover:text-white flex items-center gap-2 bg-slate-800/50 hover:bg-slate-800 px-3 py-1.5 rounded-lg transition-colors">
-                    <i class="fa-solid fa-rotate"></i> Refresh Now
-                </button>
-            </div>
-        </div>
 
         <!-- Ad-slot -->
-        <div class="AdSlot"> 
+        <div class="AdSlot flex align-center justify-center w-full"> 
             <p> ADVERTISEMENT SPACE </p>
         </div>
 
         <!-- inbox -->
-        <div class="Inbox">
-            <div class="TitleBar">
-                <h3>
+        <div class="glass-panel overflow-hidden min-h-400px relative mb-4">
+            <div class="flex pa-1p5 justify-between items-center" style="border-bottom: 1px solid rgb(255 255 255 / 0.05)">
+                <h3 class="letter-space-1 font-b700 font-grey-sp75">
                     <i class="fa-solid fa-inbox" style="color: #2563eb;"></i> 
                     INBOX
                 </h3>
-                <span id="msg-count" class="Counter">0</span>
+                <span class="text-blue font-b700 pa-xp5 pa-yp25 plate-blue bradius-p25" style="font-size: 0.75rem;">0</span>
             </div>
 
-            <div class="Massages">
-                <i class="fa-solid fa-crow" style="color: #60a5fa; font-size: 2.5rem;"></i>
-                <p style="margin-bottom: 0.3rem;">Caww.. caw..!</p>
-                <p style="font-size: 0.7rem; margin: 0;color: rgb(71 85 105);">Waiting for incoming emails...</p>
+            <div id="inbox-list" class="max-h-500px overflow-y-auto">
+                <div class="pa-5 items-center justify-center flex-col flex ">
+                    <i class="fa-solid fa-envelope-open-text text-2xl"></i>
+                </div>
             </div>
         </div>
        
-        <!-- Blogs Section -->
-        <section style="width:100%; margin-bottom: 1.5rem;">
-            <div style="display: flex; padding: 0 0.5rem; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                <h2>
-                    <i class="fa-solid fa-shield-halved" style="color: #2563eb;"></i> Security Insights
+
+        <!-- Blog / Articles Section -->
+        <section class="w-full">
+            <div class="flex items-center justify-between mb-1p5 pa-xp5">
+                <h2 class="text-xl font-b700 text-white flex items-center gap-p5">
+                    <i class="fa-solid fa-shield-halved text-blue"></i> Security Insights
                 </h2>
-                <!-- <a href="#" class="Harticle" style="color: #60a5fa; font-size: 0.875rem; text-decoration: inherit;">View all articles<i class="fa-solid fa-arrow-right ml-1"></i></a> -->
             </div>
             
-            <div class="Set">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-1p5">
                 <!-- Article 1 -->
-                <article id="Article1">
-                    <div style="justify-content: space-between; align-items: flex-start; display: flex; margin-bottom: 1rem;">
-                        <span style="color: #60a5fa;background-color: rgb(59 130 246 / 0.1);border:1px solid rgb(59 130 246 / 0.2);" class="TblogBox">PRIVACY</span>
-                        <span style="color: #64748b; font-size: 0.75rem;">Oct 12, 2025</span>
+                <article class="glass-card ">
+                    <div class="flex justify-between">
+                        <span class="bg-blue-500/10 text-blue-400 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider border border-blue-500/20">Privacy</span>
+                        <span class="text-slate-500 text-xs font-mono">Oct 12, 2025</span>
                     </div>
-                    <h3 class="ArHeading">Why Temporary Email is Essential in 2026</h3>
-                    <p style="color: rgb(148 163 184); line-height: 1.625; font-size: 0.875rem; margin: 0 0 1rem 0;">Data brokers are more aggressive than ever. Learn how disposable identities shield your primary inbox from tracking pixels.</p>
-                    <div class="Timer">
+
+                    <h3 class="text-lg font-bold mb-2 text-slate-200 group-hover:text-blue-400 transition-colors">Why Temporary Email is Essential in 2026</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">Data brokers are more aggressive than ever. Learn how disposable identities shield your primary inbox from tracking pixels.</p>
+
+                    <div class="flex items-center gap-2 text-xs text-slate-500">
                         <i class="fa-regular fa-clock"></i> 3 min read
                     </div>
                 </article>
-                <!-- Article 2 -->
-                <article id="Article2">
-                    <div style="justify-content: space-between; align-items: flex-start; display: flex; margin-bottom: 1rem;">
-                        <span style="color: #c084fc;background-color: rgb(168 85 247 / 0.1);border:1px solid rgb(168 85 247 / 0.2);" class="TblogBox">SECURITY</span>
-                        <span style="color: #64748b; font-size: 0.75rem;">Sep 28, 2025</span>
-                    </div>
-                    <h3 class="ArHeading">Spotting AI Phishing Attempts</h3>
-                    <p style="color: rgb(148 163 184); line-height: 1.625; font-size: 0.875rem; margin: 0 0 1rem 0;">Modern phishing uses AI to mimic writing styles. See how GhostMail's simple text-only rendering helps you spot malicious links.</p>
-                    <div class="Timer">
-                        <i class="fa-regular fa-clock"></i> 5 min read
-                    </div>
-                </article>
-                <!-- Article 3 -->
-                <article id="Article3">
-                    <div style="justify-content: space-between; align-items: flex-start; display: flex; margin-bottom: 1rem;">
-                        <span style="color: #4ade80;background-color: rgb(34 197 94 / 0.1);border:1px solid rgb(34 197 94 / 0.2);" class="TblogBox">Tech</span>
-                        <span style="color: #64748b; font-size: 0.75rem;">Sep 15, 2025</span>
-                    </div>
-                    <h3 class="ArHeading">The Mechanics of 1-Click Unsubscribe</h3>
-                    <p>We are rolling out new features to automatically handle unsubscribe headers without exposing your IP address to marketing platforms.</p>
-                    <div class="Timer">
-                        <i class="fa-regular fa-clock"></i> 2 min read
-                    </div>
-                </article>
-            </div>
-            
-            <div class="ViewAR">
-                <a href="#" style="color: #60a5fa; font-size: 0.875rem; text-decoration: inherit;">View all articles <i class="fa-solid fa-arrow-right ml-1"></i></a>
             </div>
         </section>
         
+        
         <!-- Ad-slot -->
-        <div class="AdSlot"> 
+        <div class="AdSlot flex align-center justify-center w-full"> 
             <p> ADVERTISEMENT SPACE </p>
         </div>
+
    </main>
+
    <hr>
-   <footer>
-        <div class="Copyright">
-            <p>&copy; 2026 GhostMail. Secure Disposable Email Service.</p>
-            <div style="display: flex; gap: 1.5rem;">
-                <a href="#" class="impLinks">Privacy</a>
-                <a href="#" class="impLinks">Terms</a>
-                <a href="#" class="impLinks">API</a>
-            </div>
-        </div>
-    </footer>
+
 </body>
 </html>

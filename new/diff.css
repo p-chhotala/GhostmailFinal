@@ -7,36 +7,19 @@
     border-color: #e5e7eb;
 }
 
-:root {
-    --primary: #3b82f6;
-}
-
 body {
     margin: 0;
     font-family: 'Space Grotesk', sans-serif;
     background-color: #0f172a;
     color: #f1f5f9;
-    /* overflow-x: hidden;*/
+    overflow-x: hidden;
 }
 
-blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
-    margin: 0;
-}
+blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {margin: 0;}
+button{cursor: pointer;}
 
-.glass-panel {
-    background: rgba(30, 41, 59, 0.6);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 24px;
-}
+.w-full{width: 100%;}
 
-
-.glass-card {
-    background: rgba(30, 41, 59, 0.4);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-}
 
 hr{
     width: 100%; 
@@ -49,40 +32,61 @@ hr{
     border-radius: 1px;
 }
 
+/* flex */
 .flex{display: flex;}
 .flex-col {flex-direction: column;}
 .flex-grow {flex-grow: 1;}
 
+/* min  */
 .min-h-screen {min-height: 100vh;}
+.min-h-400px{min-height: 400px;}
+
+/* max  */
+.max-h-500px{max-height: 500px;}
 .max-w-56{max-width: 56rem;}
 .max-w-42{max-width: 42rem;}
-.w-full{width: 100%;}
 
 
+/* alignment */
 .items-center {align-items: center;}
 .justify-between {justify-content: space-between;}
 .justify-center {justify-content: center;}
 
+/* margin  */
+.mb-4{margin-bottom: 4rem;}
 .mb-2{margin-bottom: 2rem;}
 .mb-1p5{margin-bottom: 1.5rem;}
 .mb-p75{margin-bottom: 0.75rem;}
 
+/* padding */
+.pa-xp5 {padding-left: 0.5rem; padding-right: 0.5rem;}
+.pa-yp25 {padding-top: 0.25rem; padding-bottom: 0.25rem;}
 .pa-x2{padding-top: 2rem; padding-bottom: 2rem;}
 .pa-y1{padding-left: 1rem; padding-right: 1rem;}
 .pa-1{padding: 1rem;}
 .pa-1p5{padding: 1.5rem;}
+.pa-5{padding: 5rem;}
 
+/* gap  */
 .gap-p75{gap: 0.75rem;}
 .gap-1{gap: 1rem;}
 .gap-p5{gap: 0.5rem;}
 
+/* position */
 .relative {position: relative;}
-.overflow-hidden {overflow: hidden;}
 
+/* overflow  */
+.overflow-hidden {overflow: hidden;}
+.overflow-y-auto{overflow-y: auto;}
+
+/* text  */
 .jetbmono { font-family: 'JetBrains Mono', monospace;}
 .letter-space-1{letter-spacing: 0.1em;}
-.text-white{color: #ffffff;}
+.letter-space-p5{letter-spacing: 0.5rem;}
+.font-size-1p5{font-size: 1.5rem;}
 .font-b700{font-weight: 700;}
+.text-blue{color: rgb(96 165 250);}
+.text-white {color:rgb(255 255 255);}
 .font-grey-sp75{
     color: rgb(148 163 184); 
     font-size: 0.75rem;
@@ -90,53 +94,63 @@ hr{
 .text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
-    color: rgb(96 165 250);
-}
-.bg-slate-dblue{
-    background-color: rgb(15 23 42 / 0.8);
-}
-.bg-slate-lblue {
-    background-color: rgb(37 99 235);
-}
-
-.border-grey {
-    border:1px solid rgb(51 65 85);
-}
-.bradius-p75 {
-    border-radius: 0.75rem;
 }
 
 
+/* border  */
+.border-grey {border:1px solid rgb(51 65 85);}
 
-.ad-slot {
-    background: rgba(255, 255, 255, 0.02);
+.bradius-p75 {border-radius: 0.75rem;}
+.bradius-p25 {border-radius: 0.25rem;}
+
+
+/* grid   */
+.grid-cols-1 {grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+/* plate   */
+.plate-blue{
+    background-color: rgb(59 130 246 / 0.1);
+    border: 1px solid rgb(59 130 246 / 0.2);
+}
+
+
+/* AdSlot */
+.AdSlot {
     border: 1px dashed rgba(255, 255, 255, 0.1);
-    display: flex;
+    background-color: #131b2e;
+    color: #475569;
+    border-radius: 16px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 10px;
+    margin-bottom: 2.5rem;
+    height: 6rem;
     align-items: center;
     justify-content: center;
+}
+
+/* background  */
+
+.bg-dblue {background-color: rgb(15 23 42 / 0.8);}
+.bg-lblue {background-color: rgb(37 99 235);}
+
+.glass-panel {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+}
+
+.glass-card {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
-    color: #475569;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
 }
 
-[role=button], button {
-    cursor: pointer;
-}
-
-button, input, optgroup, select, textarea {
-    font-family: inherit;
-    font-feature-settings: inherit;
-    font-variation-settings: inherit;
-    font-size: 100%;
-    font-weight: inherit;
-    line-height: inherit;
-    letter-spacing: inherit;
-    color: inherit;
-    margin: 0;
-    padding: 0;
-}
 
 @media (min-width: 640px) {
     .sm\:block {

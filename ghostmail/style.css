@@ -30,13 +30,15 @@ hr{
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
 }
-button, article{cursor: pointer;}
+button, article, a{cursor: pointer;}
 
 /* flex  */
 .flex{display: flex;}
 .flex-col{flex-direction: column;}
 
 .grid{display: grid;}
+
+.min-h-25rem{min-height: 25rem;}
 
 .max-w-56rem{max-width: 56rem;}
 .max-w-42rem{max-width: 42rem;}
@@ -52,14 +54,18 @@ button, article{cursor: pointer;}
 .p-1_5rem{padding: 1.5rem;}
 .px-0_5 {padding-left: 0.5rem; padding-right: 0.5rem;}
 
-
 .m-b-0_5rem{margin-bottom: 0.5rem;}
 .m-b-0_75rem{margin-bottom: 0.75rem;}
 .m-b-1rem{margin-bottom: 1rem;}
 .m-b-1_5rem{margin-bottom: 1.5rem;}
 .m-b-2rem{margin-bottom: 2rem;}
 
-.border-1px{border: 1px solid;}
+.font-bold{font-weight: 700;}
+
+.font-s-0_75{font-size: 0.75rem !important;}
+.font-s-1_2{font-size: 1.2rem;}
+
+.border{border: 1px solid;}
 
 /* .curve-1px{border-radius: 1px;} */
 .curve-0_75rem{border-radius: 0.75rem;}
@@ -71,10 +77,6 @@ button, article{cursor: pointer;}
 .color-lblue{color:#2563eb;}
 .color-white{color:#f1f5f9;}
 
-.font-bold{font-weight: 700;}
-
-.font-s-0_75{font-size: 0.75rem;}
-.font-s-1_2{font-size: 1.2rem;}
 
 /* .gap-0_5rem{gap: 0.5rem;} */
 
@@ -90,7 +92,7 @@ button, article{cursor: pointer;}
     border-radius: 0.25rem;
     font-size: 10px;
     letter-spacing: 0.05em;
-
+    
 }
 .card-blue{
     color: #60a5fa;
@@ -110,7 +112,6 @@ button, article{cursor: pointer;}
 
 .date{
     color: #64748b;
-    font-size: 0.75rem;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 p{
@@ -135,28 +136,35 @@ p{
     transition-duration: 150ms;
 }
 
+.bg-dull:hover .text-blue   {color: rgb(96 165 250)}
+.bg-dull:hover .text-green  {color: rgb(74 222 128)}
+.bg-dull:hover .text-purple {color: rgb(192 132 252)}
+
+.hidden{display: none;}
+
+
 @media (min-width: 768px) {
     .md\:col-span-2 {
         grid-column: span 2 / span 2
     }
-
+    
     .md\:grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr))
     }
-
+    
     .md\:flex-row {
         flex-direction: row
     }
-
+    
     .md\:p-2rem {
         padding: 2rem
     }
-
+    
     .md\:text-a {
         font-size: 1rem;
         line-height: 1.5rem
     }
-
+    
     .md\:text-b {
         font-size: 1.25rem;
         line-height: 1.75rem
@@ -167,7 +175,15 @@ p{
 
 
 
+@media (min-width: 640px) {
+    .sm\:block {
+        display: block
+    }
 
+    .sm\:hidden {
+        display: none
+    }
+}
 
 
 

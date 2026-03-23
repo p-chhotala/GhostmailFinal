@@ -30,7 +30,7 @@ hr{
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
 }
-button, article, a{cursor: pointer;}
+button, article, a{cursor: pointer; text-decoration: inherit;}
 
 /* flex  */
 .flex{display: flex;}
@@ -77,8 +77,14 @@ button, article, a{cursor: pointer;}
 .color-lblue{color:#2563eb;}
 .color-white{color:#f1f5f9;}
 
+.outline-none {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
 
-/* .gap-0_5rem{gap: 0.5rem;} */
+.gap-0_5rem{gap: 0.5rem;}
+.gap-0_75rem{gap: 0.75rem;}
+.gap-1_5rem{gap: 1.5rem;}
 
 .bg-dblue {background-color: rgb(15 23 42 / 0.8);}
 .bg-lblue {background-color: #2563eb;}
@@ -87,12 +93,12 @@ button, article, a{cursor: pointer;}
 
 .grid-cols-1 {grid-template-columns: repeat(1, minmax(0, 1fr));}
 
+.letter-space{letter-spacing: 0.05rem;}
+
 .card{
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
     border-radius: 0.25rem;
     font-size: 10px;
-    letter-spacing: 0.05em;
-    
 }
 .card-blue{
     color: #60a5fa;
@@ -125,7 +131,8 @@ p{
     font-size: 0.75rem;
 }
 
-.bg-dull:hover{background-color: rgb(30 41 59 / 0.8);}
+/* .bg-dull:hover{background-color: rgb(30 41 59 / 0.8);} */
+
 .border-blue:hover{border-color: rgb(59 130 246 / 0.3);}
 .border-purple:hover{border-color: rgb(168 85 247 /0.3);}
 .border-green:hover{border-color: rgb(34 197 94 / 0.3);}

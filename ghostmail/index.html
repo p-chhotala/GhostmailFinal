@@ -12,23 +12,21 @@
 
 </head>
 <body class="flex flex-col align-center">
-    <nav class="flex m-b-1_5rem align-center" style="font-size: 1.8rem;">
-        <i class="fa-solid fa-ghost color-blue"></i>
-        <span class="jetbmono font-bold" style="font-size: 1.5rem;">
-            GHOST
-            <span class="color-blue">
-                MAIL
-            </span>
-        </span>
+
+    <nav class="flex m-b-1_5rem align-center jetbmono gap-0_5rem">
+        <h1 class="fa-solid fa-ghost color-blue"></h1>
+        <h2 style="letter-spacing: 0.4rem;">GHOST</h2>
+        <h2 style="letter-spacing: 0.4rem;" class="color-blue">MAIL</h2>
     </nav>
+
     <hr class="w-full m-b-2rem">
     <main class="w-full pos-relative max-w-42rem m-b-2rem">
         <div class="glass-panel p-1_5rem md:p-2rem m-b-1_5rem relative overflow-hidden">
             <div class="m-b-1rem">
-                <h2 class="flex color-grey font-bold font-s-0_75 align-center m-b-0_75rem"><i class="fa-regular fa-id-badge"></i>YOUR TEMPORARY E-MAIL</h2>
-                <div class="flex flex-col md:flex-row">
+                <h2 class="letter-space flex color-grey font-bold font-s-0_75 align-center m-b-0_75rem"><i class="fa-solid fa-quote-left"></i>&#8203 YOUR TEMPORARY E-MAIL &#8203<i class="fa-solid fa-quote-right"></i></h2>
+                <div class="flex flex-col md:flex-row gap-0_75rem">
                     <div class="flex border curve-0_75rem" style="font-size: 1.125rem; flex-grow: 1; border-color: rgb(51 65 85);">
-                        <input id="emailInput" class="color-blue font-s-1_2 p-1rem w-full bg-dblue curve-0_75rem md:text-b jetbmono" type="text" readonly value="5rl057vueg@1secmail.net">
+                        <input id="emailInput" class="outline-none color-blue font-s-1_2 p-1rem w-full bg-dblue curve-0_75rem md:text-b jetbmono" type="text" readonly value="5rl057vueg@1secmail.net">
                     </div>
 
                     <button onclick="copyText()" class="flex font-bold bg-lblue curve-0_75rem justify-center align-center color-white" style="font-size: 100%; padding: 1rem 2rem 1rem 2rem;">
@@ -40,30 +38,29 @@
         </div>
 
         <div class="glass-panel overflow-hidden m-b-1_5rem min-h-25rem">
-            <div class="flex justify-between align-center p-1_5rem " style="border-bottom:1px solid #ffffff0d;">
-                <h3 class="font-bold color-white font-s-0_75 flex align-center">
-                    <i class="fa-solid fa-inbox color-lblue"></i> INBOX
+            <div class="flex justify-between align-center p-1_5rem" style="border-bottom:1px solid #ffffff0d;">
+                <h3 class="letter-space color-white font-s-0_75 flex align-center">
+                    <i class="fa-solid fa-inbox color-lblue"></i> &#8203 INBOX
                 </h3>
                 <span id="msg-count" class="font-s-0_75 card-blue card font-bold">0</span>
             </div>
             <div id="inbox-list" style="overflow-y: hidden; max-height: 500px;">
-                <i class="fa-solid fa-moon color-blue"></i>
             </div>
         </div>
 
         <section class="w-full">
             <div class="flex align-center justify-between m-b-1_5rem px-0_5">
-                <h2 class="font-bold flex align-center" style="font-size: 1.25rem; gap: 0.5rem;">
+                <h2 class="font-bold flex align-center gap-0_5rem" style="font-size: 1.25rem;">
                     <i class="fa-solid fa-shield-halved color-lblue"></i> Security Insights
                 </h2>
-                <a class="color-blue font-bold hidden sm:block">View all articles <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#" class="color-blue font-bold hidden sm:block">View all articles<i class="fa-solid fa-arrow-right"></i></a>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2" style="gap: 1.5rem;">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-1_5rem">
                 <!-- Article 1 -->
                 <article class="glass-card p-1_5rem transition-all bg-dull border-blue">
                     <div class="flex justify-between m-b-1rem align-center">
-                        <span class="font-bold card card-blue">PRIVACY</span>
+                        <span class="font-bold letter-space card card-blue">PRIVACY</span>
                         <span class="date font-s-0_75">Oct 12, 2025</span>
                     </div>
 
@@ -76,7 +73,7 @@
                 <!-- Article 2 -->
                 <article class="glass-card p-1_5rem transition-all bg-dull border-purple">
                     <div class="flex justify-between m-b-1rem align-center">
-                        <span class="font-bold card card-purple">SECURITY</span>
+                        <span class="font-bold letter-space card card-purple">SECURITY</span>
                         <span class="date font-s-0_75">Sep 28, 2025</span>
                     </div>
                     <h3 class="font-bold m-b-0_5rem text-purple transition-all">Spotting AI Phishing Attempts</h3>
@@ -88,7 +85,7 @@
                 <!-- Article 3 -->
                 <article class="glass-card p-1_5rem transition-all md:col-span-2 bg-dull border-green">
                     <div class="flex justify-between m-b-1rem align-center">
-                        <span class="font-bold card card-green">TECH</span>
+                        <span class="font-bold letter-space card card-green">TECH</span>
                         <span class="date font-s-0_75">Sep 15, 2025</span>
                     </div>
                     <h3 class="font-bold m-b-0_5rem text-green transition-all">The Mechanics of 1-Click Unsubscribe</h3>
@@ -98,9 +95,16 @@
                     </div>
                 </article>
             </div>
+
         </section>
     </main>
+
+    <div class="mt-6 text-center sm:hidden">
+        <a href="#" class="m-b-1_5rem flex justify-center color-blue font-bold sm:block align-center">View all articles  <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
     <hr class="w-full m-b-1_5rem">
+
     <footer class="w-full max-w-56rem font-s-0_75 font-bold" style="color: #475569;">
         <div class="flex flex-col md:flex-row justify-between align-center">
             <copyright> &copy; 2026 GhostMail. Secure Disposable Email Service.</copyright>
@@ -109,7 +113,7 @@
                 <a class="">Terms</a>
                 <a class="">API</a>
             </div>
-        </div>
+        </div>      
     </footer>
 </body>
 </html>

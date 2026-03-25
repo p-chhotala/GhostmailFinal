@@ -9,6 +9,7 @@
     <title>GhostMail | Secure Disposable Email</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="st.css">
 
 </head>
 <body class="flex flex-col align-center">
@@ -29,7 +30,7 @@
                         <input id="emailInput" class="outline-none color-blue font-s-1_2 p-1rem w-full bg-dblue curve-0_75rem md:text-b jetbmono" type="text" readonly value="5rl057vueg@1secmail.net">
                     </div>
 
-                    <button onclick="copyText()" class="flex font-bold bg-lblue curve-0_75rem justify-center align-center color-white" style="font-size: 100%; padding: 1rem 2rem 1rem 2rem;">
+                    <button onclick="copyText()" class="flex font-bold bg-lblue curve-0_75rem justify-center align-center" style="font-size: 100%; padding: 1rem 2rem 1rem 2rem;">
                         <i class="fa-solid fa-copy"></i>
                         COPY
                     </button>
@@ -39,16 +40,16 @@
 
         <div class="glass-panel overflow-hidden m-b-1_5rem min-h-25rem">
             <div class="flex justify-between align-center p-1_5rem" style="border-bottom:1px solid #ffffff0d;">
-                <h3 class="letter-space color-white font-s-0_75 flex align-center">
-                    <i class="fa-solid fa-inbox color-lblue"></i> &#8203 INBOX
-                </h3>
+                <h class="font-bold letter-space font-s-0_75 flex align-center jetbmono">
+                    <i class="fa-solid fa-inbox color-lblue"></i> &#8203; INBOX
+                </h>
                 <span id="msg-count" class="font-s-0_75 card-blue card font-bold">0</span>
             </div>
         </div>
 
-        <ads class="flex align-center justify-center curve-0_75rem m-b-1rem jetbmono font-bold">
-            ADs
-        </ads>
+        <div class="flex glass-card justify-center align-center color-dgrey m-b-1rem height-5rem">
+            AD SPACE
+        </div>
 
         <section class="w-full">
             <div class="flex align-center justify-between m-b-1_5rem px-0_5">
@@ -60,18 +61,20 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-1_5rem">
                 <!-- Article 1 -->
-                <article class="glass-card p-1_5rem transition-all bg-dull border-blue">
-                    <div class="flex justify-between m-b-1rem align-center">
-                        <span class="font-bold letter-space card card-blue">PRIVACY</span>
-                        <span class="date font-s-0_75">Oct 12, 2025</span>
-                    </div>
+                 <a href="blogs/article1.html">
+                    <article class="glass-card p-1_5rem transition-all bg-dull border-blue">
+                        <div class="flex justify-between m-b-1rem align-center">
+                            <span class="font-bold letter-space card card-blue">PRIVACY</span>
+                            <span class="date font-s-0_75">Oct 12, 2025</span>
+                        </div>
 
-                    <h3 class="font-bold m-b-0_5rem text-blue transition-all">Why Temporary Email is Essential in 2026</h3>
-                    <p class="m-b-1rem">Data brokers are more aggressive than ever. Learn how disposable identities shield your primary inbox from tracking pixels.</p>
-                    <div class="clock">
-                        <i class="fa-regular fa-clock"></i> 3 min read
-                    </div>
-                </article>
+                        <h3 class="font-bold m-b-0_5rem text-blue transition-all">Why Temporary Email is Essential in 2026</h3>
+                        <p class="m-b-1rem">Data brokers are more aggressive than ever. Learn how disposable identities shield your primary inbox from tracking pixels.</p>
+                        <!-- <div class="clock">
+                            <i class="fa-regular fa-clock"></i> 3 min read
+                        </div> -->
+                    </article>
+                 </a>
                 <!-- Article 2 -->
                 <article class="glass-card p-1_5rem transition-all bg-dull border-purple">
                     <div class="flex justify-between m-b-1rem align-center">
@@ -80,9 +83,6 @@
                     </div>
                     <h3 class="font-bold m-b-0_5rem text-purple transition-all">Spotting AI Phishing Attempts</h3>
                     <p class="m-b-1rem">Modern phishing uses AI to mimic writing styles. See how GhostMail's simple text-only rendering helps you spot malicious links.</p>
-                    <div class="clock">
-                        <i class="fa-regular fa-clock"></i> 5 min read
-                    </div>
                 </article>
                 <!-- Article 3 -->
                 <article class="glass-card p-1_5rem transition-all md:col-span-2 bg-dull border-green">
@@ -92,12 +92,11 @@
                     </div>
                     <h3 class="font-bold m-b-0_5rem text-green transition-all">The Mechanics of 1-Click Unsubscribe</h3>
                     <p class="m-b-1rem">We are rolling out new features to automatically handle unsubscribe headers without exposing your IP address to marketing platforms.</p>
-                    <div class="clock">
+                    <!-- <div class="clock">
                         <i class="fa-regular fa-clock"></i> 2 min read
-                    </div>
+                    </div> -->
                 </article>
             </div>
-
         </section>
     </main>
 
@@ -110,11 +109,11 @@
     <footer class="w-full max-w-56rem font-s-0_75 font-bold" style="color: #475569;">
         <div class="flex flex-col md:flex-row justify-between align-center gap-0_75rem">
             <copyright> &copy; 2026 GhostMail. Secure Disposable Email Service.</copyright>
-            <div class="flex gap-0_5rem">
-                <a class="">Privacy</a>
-                <a class="">Terms</a>
-                <a class="">API</a>
-            </div>
+            <ul class="flex gap-0_5rem">
+                <li>Privacy</li>|
+                <li>Terms</li>|
+                <li>API</li>
+            </ul>
         </div>      
     </footer>
 </body>

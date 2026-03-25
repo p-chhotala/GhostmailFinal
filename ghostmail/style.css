@@ -5,6 +5,7 @@
     border: 0;
     margin: 0;
     padding: 0;
+    outline: none;
 }
 
 body {
@@ -31,13 +32,20 @@ hr{
     border-radius: 16px;
 }
 
-button, article, a{cursor: pointer; text-decoration: inherit;}
+button, article, a{
+    cursor: pointer; 
+    text-decoration: none;
+    color: inherit;
+}
 
-/* flex  */
+ul{list-style: none; }
+
 .flex{display: flex;}
 .flex-col{flex-direction: column;}
 
 .grid{display: grid;}
+
+.block-inline{display: inline-block;}
 
 .min-h-25rem{min-height: 25rem;}
 
@@ -50,6 +58,8 @@ button, article, a{cursor: pointer; text-decoration: inherit;}
 .justify-between{justify-content: space-between;}
 
 .overflow-hidden{overflow: hidden;}
+
+.height-5rem{height: 5rem;}
 
 .p-1rem{padding: 1rem;}
 .p-1_5rem{padding: 1.5rem;}
@@ -68,20 +78,14 @@ button, article, a{cursor: pointer; text-decoration: inherit;}
 
 .border{border: 1px solid;}
 
-/* .curve-1px{border-radius: 1px;} */
 .curve-0_75rem{border-radius: 0.75rem;}
 
 .pos-relative{position: relative;}
 
-.color-grey{color: #94a3b8;}
+.color-grey, .hover-grey:hover, l:hover{color: #94a3b8;}
+.color-dgrey{color: #64748b;}
 .color-blue{color: #74c0fc;}
 .color-lblue{color:#2563eb;}
-.color-white{color:#f1f5f9;}
-
-.outline-none {
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-}
 
 .gap-0_5rem{gap: 0.5rem;}
 .gap-0_75rem{gap: 0.75rem;}
@@ -117,9 +121,10 @@ button, article, a{cursor: pointer; text-decoration: inherit;}
     border:1px solid rgb(34 197 94 / 0.2);
 }
 
-.date{
+.date, .clock{
     color: #64748b;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.75rem;
 }
 p{
     color: #94a3b8;
@@ -127,12 +132,9 @@ p{
     font-weight: 400;
     font-size: 0.875rem;
 }
-.clock{
-    color: #64748b;
-    font-size: 0.75rem;
-}
 
-/* .bg-dull:hover{background-color: rgb(30 41 59 / 0.8);} */
+/* .clock{
+} */
 
 .border-blue:hover{border-color: rgb(59 130 246 / 0.3);}
 .border-purple:hover{border-color: rgb(168 85 247 /0.3);}
@@ -144,19 +146,11 @@ p{
     transition-duration: 150ms;
 }
 
-.bg-dull:hover .text-blue   {color: rgb(96 165 250)}
-.bg-dull:hover .text-green  {color: rgb(74 222 128)}
-.bg-dull:hover .text-purple {color: rgb(192 132 252)}
+.glass-card:hover .text-blue   {color: rgb(96 165 250)}
+.glass-card:hover .text-green  {color: rgb(74 222 128)}
+.glass-card:hover .text-purple {color: rgb(192 132 252)}
 
 .hidden{display: none;}
-
-ads{
-    background: rgba(255, 255, 255, 0.02);
-    border: 1.5px dashed rgba(255, 255, 255, 0.1);
-    color: #475569;
-    font-size: 10px;
-    height: 5rem;
-}
 
 @media (min-width: 768px) {
     .md\:col-span-2 {

@@ -1,0 +1,99 @@
+/* CARD LINK */
+.article-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* CARD CONTAINER */
+.card-container {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* HOVER EFFECT */
+.card-container:hover {
+    transform: translateY(-5px);
+    border-color: rgba(116, 192, 252, 0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* GLOW EFFECT */
+.card-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(116,192,252,0.15), transparent 60%);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card-container:hover::before {
+    opacity: 1;
+}
+
+/* TITLE */
+.title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* DESCRIPTION */
+.desc {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* META */
+.meta {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+/* DATE */
+.date {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+/* READ MORE */
+.read-more {
+    font-size: 0.8rem;
+    color: #74c0fc;
+    transition: 0.2s;
+}
+
+.card-container:hover .read-more {
+    transform: translateX(4px);
+}
+
+/* TAG BASE */
+.tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.4rem;
+    font-weight: 600;
+}
+
+/* TAG COLORS */
+.tag-blue {
+    color: #74c0fc;
+    background: rgba(116,192,252,0.1);
+}
+
+.tag-purple {
+    color: #c084fc;
+    background: rgba(192,132,252,0.1);
+}
+
+.tag-green {
+    color: #4ade80;
+    background: rgba(74,222,128,0.1);
+}

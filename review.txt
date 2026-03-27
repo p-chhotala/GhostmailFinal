@@ -1,0 +1,5 @@
+copy button in index.html
+inline css
+gaps
+font size
+all hovers

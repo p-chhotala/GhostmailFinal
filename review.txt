@@ -3,3 +3,34 @@ inline css
 gaps
 font size
 all hovers
+
+
+
+<!-- <div class="grid grid-cols-1 gap-0_75rem mb-1_5rem">
+                <div class="feature-item">
+                    <i class="fa-solid fa-bolt color-blue"></i>
+                    <span>Instant email generation</span>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fa-solid fa-user-secret color-blue"></i>
+                    <span>No signup or personal data required</span>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fa-solid fa-shield-halved color-blue"></i>
+                    <span>Protects your identity and privacy</span>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fa-solid fa-trash color-blue"></i>
+                    <span>Disposable and auto-expiring inbox</span>
+                </div>
+            </div> -->
+
+
+
+            <div class="glass-panel p-1_5rem text-center relative overflow-hidden">
+            <p class="mb-0_5rem">Forget about spam, ads, and tracking. GhostMail keeps your real inbox clean by giving you a secure, anonymous, and disposable email for free.</p>
+            <p>Built for speed and privacy — just a simple way to stay safe online</p>
+        </div>

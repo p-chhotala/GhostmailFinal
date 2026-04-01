@@ -33,15 +33,9 @@ p{
     font-size: 0.875rem;
 }
 
-.up:hover{
-    position:relative;
-    transform: translateY(-8px);
-    transform: translateX(-8px);
-}
-
-.border-blue:hover{border-color: rgb(59 130 246 / 0.3); box-shadow: 12px 12px 0px 1px rgb(59 130 246 / 0.3);}
-.border-purple:hover{border-color: rgb(168 85 247 /0.3); box-shadow: 12px 12px 0px 1px rgb(168 85 247 /0.3);}
-.border-green:hover{border-color: rgb(34 197 94 / 0.3); box-shadow: 12px 12px 0px 1px rgb(34 197 94 / 0.3);}
+.border-blue:hover{border-color: rgb(59 130 246 / 0.3);}
+.border-purple:hover{border-color: rgb(168 85 247 /0.3);}
+.border-green:hover{border-color: rgb(34 197 94 / 0.3);}
 
 .transition-all {
     transition-property: all;
@@ -52,6 +46,9 @@ p{
 .glass-card:hover .text-blue   {color: rgb(96 165 250)}
 .glass-card:hover .text-green  {color: rgb(74 222 128)}
 .glass-card:hover .text-purple {color: rgb(192 132 252)}
+
+
+
 
 
 

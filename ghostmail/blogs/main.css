@@ -1,0 +1,85 @@
+:root{
+    --blue: 59 130 246;
+    --purple: 168 85 247;
+    --green: 34 197 94;
+    /* --pink: 244 114 182;
+    --indigo: 129 140 248;
+    --red: 248 113 113; */
+
+    --bg-opacity: 0.1;
+    --border-opacity: 0.2;
+    --card-border-opacity: 0.3;
+}
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.card{
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+p{
+    color: #94a3b8;
+    line-height: 1.625;
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.date, .clock{
+    color: #64748b;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.75rem;
+}
+
+.card-blue{
+    color: #60a5fa;
+    background-color: rgb(var(--blue) / var(--bg-opacity));
+    border:1px solid rgb(var(--blue) / var(--border-opacity));
+}
+.card-purple{
+    color: #c084fc;
+    background-color: rgb(var(--purple) / var(--bg-opacity));
+    border:1px solid rgb(var(--purple) / var(--border-opacity));
+}
+.card-green{
+    color: #4ade80;
+    background-color: rgb(var(--green) / var(--bg-opacity));
+    border:1px solid rgb(var(--green) / var(--border-opacity));
+}
+
+.border-blue:hover  {border-color: rgb(var(--blue) / var(--card-border-opacity));}
+.border-purple:hover{border-color: rgb(var(--purple) / var(--card-border-opacity));}
+.border-green:hover {border-color: rgb(var(--green) / var(--card-border-opacity));}
+
+.glass-card:hover .text-blue   {color: rgb(var(--blue))}
+.glass-card:hover .text-purple {color: rgb(var(--purple))}
+.glass-card:hover .text-green  {color: rgb(var(--green))}
+
+
+
+
+/* .border-red:hover   {border-color: rgba(248, 113, 113, var(--card-border-opacity));}
+.border-indigo:hover{border-color: rgba(129, 140, 248, var(--card-border-opacity));}
+.border-pink:hover  {border-color: rgba(244, 114, 182, var(--card-border-opacity));} */
+
+/* .card-pink {
+    color: #f472b6;
+    background-color: rgb(244 114 182 / var(--bg-opacity));
+    border: 1px solid rgb(244 114 182 / var(--border-opacity));
+}
+.card-indigo {
+    color: #818cf8;
+    background-color: rgb(129 140 248 / var(--bg-opacity));
+    border: 1px solid rgb(129 140 248 / var(--border-opacity));
+}
+.card-red {
+    color: #f87171;
+    background-color: rgb(248 113 113 / var(--bg-opacity));
+    border: 1px solid rgb(248 113 113 / var(--border-opacity));
+} */

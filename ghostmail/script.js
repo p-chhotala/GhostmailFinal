@@ -96,10 +96,8 @@ async function getInbox() {
 
         const data = JSON.parse(text);
 
-        // const messages = data.list || [];
-        const messages = (data.list || []).filter(mail =>
-            mail.mail_from !== "no-reply@guerrillamail.com"
-        );
+        const messages = data.list || [];
+        // const messages = (data.list || []).filter(mail =>mail.mail_from !== "no-reply@guerrillamail.com");
 
         // 📊 Counter
         const countEl = document.getElementById("msg-count");
@@ -116,9 +114,9 @@ async function getInbox() {
 
         messages.forEach(mail => {
             newHTML += `
-                <div class=" p-1rem m-b-0_5rem mail-card" onclick="openMail('${mail.mail_id}')">
-                    <strong>${mail.mail_from}</strong><br>
-                    <span>${mail.mail_subject}</span>
+                <div class="p-1rem mail" style="border-bottom: 1px solid #ffffff0d;" onclick="openMail('${mail.mail_id}')">
+                    <h4 class="color-blue">${mail.mail_from}</h4>
+                    <p>${mail.mail_subject}</p>
                 </div>
             `;
         });
@@ -152,12 +150,12 @@ function openMail(emailId) {
         .then(data => {
 
             document.getElementById("inbox").innerHTML = `
-                <div class="glass-card p-1_5rem">
-                    <button class="glass-panel p-1rem" onclick="goBack()">← Back</button>
+                <div class="p-1_5rem flex flex-col">
+                    <a class="color-blue font-bold mb-0_5rem" onclick="goBack()" style="position: absolute;"><i class="fa-solid fa-angle-left"></i>Back</a>
                     <h3>${data.mail_subject}</h3>
-                    <p><strong>From:</strong> ${data.mail_from}</p>
-                    <hr>
-                    <div style="white-space: pre-wrap;">
+                    <p class="mb-0_75rem"><b>From:</b> ${data.mail_from}</p>
+                    <hr class="mb-0_75rem">
+                    <div class="mail-body">
                         ${data.mail_body}
                     </div>
                 </div>

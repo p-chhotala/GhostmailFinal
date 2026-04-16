@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -32,11 +33,16 @@ hr{
     border-radius: 16px;
 }
 
-button, article, a, ul{
+button, article, a, ul, .mail{
     cursor: pointer; 
     text-decoration: none;
     color: inherit;
     list-style: none;
+}
+
+button:active, a:active{
+    transform: scale(0.98);
+    opacity: 0.8;
 }
 
 .flex{display: flex;}
@@ -46,7 +52,8 @@ button, article, a, ul{
 
 .block-inline{display: inline-block;}
 
-.min-h-25rem{min-height: 25rem;}
+.max-h-500px{max-height: 500px;}
+.min-h-400px{min-height: 400px;}
 
 .max-w-56rem{max-width: 56rem;}
 .max-w-42rem{max-width: 42rem;}
@@ -65,11 +72,11 @@ button, article, a, ul{
 .p-1_5rem{padding: 1.5rem;}
 .px-0_5 {padding-left: 0.5rem; padding-right: 0.5rem;}
 
+.mb-0_5rem{margin-bottom: 0.5rem;}
 .mb-0_75rem{margin-bottom: 0.75rem;}
 .mb-1rem{margin-bottom: 1rem;}
 .mb-1_5rem{margin-bottom: 1.5rem;}
 .mb-2rem{margin-bottom: 2rem;}
-.mb-0_5rem{margin-bottom: 0.5rem;}
 
 .font-bold{font-weight: 700;}
 
@@ -99,9 +106,6 @@ button, article, a, ul{
 .grid-cols-1 {grid-template-columns: repeat(1, minmax(0, 1fr));}
 
 .letter-space{letter-spacing: 0.05rem;}
-
-
-
 
 .hidden{display: none;}
 
@@ -137,10 +141,6 @@ button, article, a, ul{
     }
 }
 
-
-
-
-
 @media (min-width: 640px) {
     .sm\:block {
         display: block
@@ -150,18 +150,6 @@ button, article, a, ul{
         display: none
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
@@ -177,3 +165,33 @@ button, article, a, ul{
 ::-webkit-scrollbar-thumb:hover {
     background: #475569; 
 }
+/* 
+
+
+
+.mail-body {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+.mail-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.mail-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.mail-body::-webkit-scrollbar-thumb {
+    background: rgba(76, 201, 240, 0.6);
+    border-radius: 10px;
+}
+
+.mail-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(76, 201, 240, 0.9);
+}
+
+.mail-body {
+    scrollbar-width: thin;
+    scrollbar-color: #4cc9f0 transparent;
+} */

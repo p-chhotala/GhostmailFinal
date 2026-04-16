@@ -161,7 +161,6 @@ function openMail(emailId) {
                 </div>
             `;
         });
-        
 }
 
 
@@ -204,4 +203,5 @@ window.onload = async () => {
         getInbox();
         window.inboxInterval = setInterval(getInbox, 6000);
     }, 1500);
+    
 };

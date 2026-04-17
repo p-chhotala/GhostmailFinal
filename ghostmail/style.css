@@ -52,9 +52,6 @@ button:active, a:active{
 
 .block-inline{display: inline-block;}
 
-.max-h-500px{max-height: 500px;}
-.min-h-400px{min-height: 400px;}
-
 .max-w-56rem{max-width: 56rem;}
 .max-w-42rem{max-width: 42rem;}
 .w-full{width: 100%;}
@@ -68,9 +65,9 @@ button:active, a:active{
 
 .height-5rem{height: 5rem;}
 
+.px-0_5 {padding-left: 0.5rem; padding-right: 0.5rem;}
 .p-1rem{padding: 1rem;}
 .p-1_5rem{padding: 1.5rem;}
-.px-0_5 {padding-left: 0.5rem; padding-right: 0.5rem;}
 
 .mb-0_5rem{margin-bottom: 0.5rem;}
 .mb-0_75rem{margin-bottom: 0.75rem;}
@@ -99,7 +96,7 @@ button:active, a:active{
 .gap-1_5rem{gap: 1.5rem;}
 
 .bg-dblue {background-color: rgb(15 23 42 / 0.8);}
-.bg-lblue {background-color: #74c0fc;}
+.bg-blue {background-color: #74c0fc;}
 
 .jetbmono {font-family: 'JetBrains Mono', monospace;}
 
@@ -155,9 +152,7 @@ button:active, a:active{
 ::-webkit-scrollbar {
     width: 8px;
 }
-::-webkit-scrollbar-track {
-    background: #0f172a; 
-}
+
 ::-webkit-scrollbar-thumb {
     background: #334155; 
     border-radius: 4px;
@@ -165,33 +160,43 @@ button:active, a:active{
 ::-webkit-scrollbar-thumb:hover {
     background: #475569; 
 }
-/* 
 
 
-
-.mail-body {
-    max-height: 300px;
-    overflow-y: auto;
-    padding-right: 6px;
-}
-.mail-body::-webkit-scrollbar {
-    width: 6px;
+#inbox::-webkit-scrollbar {
+    width: 3px;
 }
 
-.mail-body::-webkit-scrollbar-track {
+#inbox::-webkit-scrollbar-track {
     background: transparent;
 }
 
-.mail-body::-webkit-scrollbar-thumb {
-    background: rgba(76, 201, 240, 0.6);
-    border-radius: 10px;
-}
-
-.mail-body::-webkit-scrollbar-thumb:hover {
-    background: rgba(76, 201, 240, 0.9);
+#inbox::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: #475569;
 }
 
 .mail-body {
-    scrollbar-width: thin;
-    scrollbar-color: #4cc9f0 transparent;
-} */
+    overflow-x: hidden;
+}
+
+.mail-body,
+.mail-body * {
+    width: auto;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+.mail-body table {
+    width: auto;
+    width: 100% !important;
+    table-layout: fixed;
+}
+
+.mail-body img {
+    max-width: 100% !important;
+    height: auto;
+}
+
+.mail-body pre {
+    white-space: pre-wrap !important;
+}

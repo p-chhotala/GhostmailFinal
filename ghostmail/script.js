@@ -114,9 +114,14 @@ async function getInbox() {
 
         messages.forEach(mail => {
             newHTML += `
-                <div class="p-1rem mail" style="border-bottom: 1px solid #ffffff0d;" onclick="openMail('${mail.mail_id}')">
-                    <h4 class="color-blue">${mail.mail_from}</h4>
-                    <p>${mail.mail_subject}</p>
+                <div class="mb-0_5rem p-1rem mail flex justify-between align-center" style="border-left: 3px solid #74c0fc;" onclick="openMail('${mail.mail_id}')">
+                    <div>
+                        <h4 class="color-blue">${mail.mail_from}</h4>
+                        <p>${mail.mail_subject}</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-angle-right color-blue"></i>
+                    </div>
                 </div>
             `;
         });
@@ -151,11 +156,11 @@ function openMail(emailId) {
 
             document.getElementById("inbox").innerHTML = `
                 <div class="p-1_5rem flex flex-col">
-                    <a class="color-blue font-bold mb-0_5rem" onclick="goBack()" style="position: absolute;"><i class="fa-solid fa-angle-left"></i>Back</a>
+                    <ul class="color-blue font-bold mb-0_5rem" onclick="goBack()"><i class="fa-solid fa-angle-left"></i>Back</ul>
                     <h3>${data.mail_subject}</h3>
                     <p class="mb-0_75rem"><b>From:</b> ${data.mail_from}</p>
-                    <hr class="mb-0_75rem">
-                    <div class="mail-body">
+                    <hr class="mb-0_75rem bg-blue">
+                    <div class="mail-body overflow-hidden">
                         ${data.mail_body}
                     </div>
                 </div>
@@ -201,7 +206,7 @@ window.onload = async () => {
 
     setTimeout(() => {
         getInbox();
-        window.inboxInterval = setInterval(getInbox, 6000);
+        window.inboxInterval = setInterval(getInbox, 5000);
     }, 1500);
     
 };

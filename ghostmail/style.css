@@ -52,6 +52,8 @@ button:active, a:active{
 
 .block-inline{display: inline-block;}
 
+.h-22rem{height: 22rem;}
+
 .max-w-56rem{max-width: 56rem;}
 .max-w-42rem{max-width: 42rem;}
 .w-full{width: 100%;}
@@ -179,17 +181,10 @@ button:active, a:active{
     overflow-x: hidden;
 }
 
-.mail-body,
-.mail-body * {
+.mail-body *{
     width: auto;
     max-width: 100% !important;
     box-sizing: border-box;
-}
-
-.mail-body table {
-    width: auto;
-    width: 100% !important;
-    table-layout: fixed;
 }
 
 .mail-body img {
@@ -198,5 +193,6 @@ button:active, a:active{
 }
 
 .mail-body pre {
+    overflow-wrap: break-word;
     white-space: pre-wrap !important;
 }

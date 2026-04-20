@@ -160,7 +160,7 @@ function openMail(emailId) {
                     <h3>${data.mail_subject}</h3>
                     <p class="mb-0_75rem"><b>From:</b> ${data.mail_from}</p>
                     <hr class="mb-0_75rem bg-blue">
-                    <div class="mail-body overflow-hidden">
+                    <div class="mail-body">
                         ${data.mail_body}
                     </div>
                 </div>

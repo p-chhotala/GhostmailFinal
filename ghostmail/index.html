@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="blogs/blog.css">
     <script src="script.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1955872619565004" crossorigin="anonymous"></script>
 </head>
 
 <body class="flex flex-col align-center">
 
-    <nav class="flex mb-1_5rem align-center jetbmono gap-0_5rem">
+    <nav class="flex mb-1rem align-center jetbmono gap-0_5rem">
         <h1 class="fa-solid fa-ghost color-blue"></h1>
         <h2 style="letter-spacing: 0.4rem;">GHOST</h2>
         <h2 style="letter-spacing: 0.4rem;" class="color-blue">MAIL</h2>
@@ -21,18 +22,16 @@
     <hr class="w-full mb-2rem">
 
     <main class="w-full pos-relative max-w-42rem mb-2rem">
-        <div class="glass-panel p-1_5rem md:p-2rem mb-1_5rem relative overflow-hidden">
-            <div class="mb-1rem">
-                <h2 class="letter-space flex color-grey font-bold font-s-0_75 align-center mb-0_75rem"><i class="fa-solid fa-quote-left"></i>&#8203; YOUR TEMPORARY E-MAIL &#8203;<i class="fa-solid fa-quote-right"></i></h2>
-                <div class="flex flex-col md:flex-row gap-0_75rem">
-                    <div class="flex curve-0_75rem" style="flex-grow: 1; border: 2px solid #ffffff0d;">
-                        <input id="emailInput" class="color-blue p-1rem w-full bg-dblue curve-0_75rem md:text-b jetbmono" style="font-size: 1.25rem;" readonly value="Boo....">
-                    </div>
-                    <button onclick="copyText()" class="flex bg-blue curve-0_75rem justify-center align-center" style="gap: 5px; padding: 1rem 2rem 1rem 2rem;">
-                        <i class="fa-regular fa-paste" style="font-size: 1.25rem; color: #f1f5f9;"></i>
-                        <h3 class="jetbmono" style="font-size: 1.25rem;">COPY</h3>
-                    </button>
+        <div class="glass-panel p-1_5rem md:p-2rem mb-1_5rem">   
+            <h2 class="letter-space flex color-grey font-bold font-s-0_75 align-center mb-0_75rem"><i class="fa-solid fa-quote-left"></i>&#8203; YOUR TEMPORARY E-MAIL &#8203;<i class="fa-solid fa-quote-right"></i></h2>
+            <div class="flex flex-col mb-0_5rem md:flex-row gap-0_75rem">
+                <div class="flex curve-0_75rem" style="flex-grow: 1; border: 2px solid #ffffff0d;">
+                    <input id="emailInput" class="color-blue p-1rem w-full bg-dblue curve-0_75rem md:text-b jetbmono" style="font-size: 1.25rem;" readonly value="Boo....">
                 </div>
+                <button onclick="copyText()" class="flex bg-blue curve-0_75rem justify-center align-center" style="gap: 5px; padding: 1rem 2rem 1rem 2rem;">
+                    <i class="fa-regular fa-paste" style="font-size: 1.25rem; color: #f1f5f9;"></i>
+                    <h3 class="jetbmono" style="font-size: 1.25rem;">COPY</h3>
+                </button>
             </div>
         </div>
 
@@ -50,11 +49,9 @@
             <div class="flex p-1rem justify-between" style="border-top:1px solid #ffffff0d;"></div>
         </div>
 
-        <p class="flex glass-card justify-center align-center mb-1rem height-5rem"> AD SPACE</p>
+        <a onclick="newEmail()" class="flex border curve-0_75rem p-1rem mb-1rem font-bold align-center justify-center" style="border-color: brown; color: brown;">Summon New Ghost</a>
 
-        <a onclick="newEmail()" class="flex border curve-0_75rem p-1rem mb-1rem font-bold align-center justify-center" style="border-color: brown; color: brown;">
-            Summon New Ghost
-        </a>
+        <p class="flex glass-card justify-center align-center mb-1rem height-5rem"> AD SPACE</p>
 
         <section class="w-full">
             <div class="flex align-center justify-between mb-1_5rem px-0_5">
@@ -107,14 +104,54 @@
         <a href="blogs/allarticles.html" class="mb-1_5rem flex justify-center color-blue font-bold sm:block align-center">View all articles <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 
+    <section class="max-w-42rem mb-1_5rem">
+        <div class="flex align-center justify-between mb-1_5rem px-0_5">
+            <h2 class="font-bold flex align-center gap-0_5rem">
+                <i class="fa-solid fa-book-skull"></i> About GhostMail
+            </h2>
+            <!-- <a href="blogs/allarticles.html" class="color-blue font-bold hidden sm:block">View all articles <i class="fa-solid fa-arrow-right"></i></a> -->
+        </div>
+        <div class="glass-card p-1_5rem">
+            <h3 class="mb-1rem color-blue">GhostMail is a free temporary email service designed for speed, privacy, and simplicity.</h3>
+            <p> It allows you to generate a disposable email instantly and receive messages without signing up or sharing personal information.</p><br>
+            <p> In today's internet, your email is constantly exposed — from signups to downloads to random websites. GhostMail helps you stay protected by giving you a temporary inbox that keeps your real email safe from spam, tracking, and unwanted messages.</p><br>
+            <p> No accounts. No tracking. No complications. Just a working inbox when you need it.</p>
+        </div>
+    </section>
+
+    <section class="w-full max-w-42rem mb-1_5rem">
+        <div class="flex align-center justify-between mb-1_5rem px-0_5">
+            <h2 class="font-bold flex align-center gap-0_5rem">
+                <i class="fa-solid fa-flag"></i> How to Use Temp-Mail
+            </h2>
+            <!-- <a href="blogs/allarticles.html" class="color-blue font-bold hidden sm:block">View all articles <i class="fa-solid fa-arrow-right"></i></a> -->
+        </div>
+        <div class="glass-card p-1_5rem">
+            <h2 class="color-blue">Generate</h2>
+            <p class="mb-1rem">Visit a temporary email website and generate one.</p>
+            
+            <h2 class="color-blue">Copy</h2>
+            <p class="mb-1rem">Copy the generated email and use it wherever an email is required.</p>
+
+            <h2 class="color-blue">Receive mail (OTP)</h2>
+            <p class="mb-1rem">it will appear in your temporary inbox.</p>
+            
+            <h2 class=" color-blue">Discard</h2>
+            <p class="mb-1rem">When you no longer need the email, simply leave the page.</p>
+            
+        </div>
+    </section>
+
+
+
     <hr class="w-full mb-1_5rem">
 
     <footer class="w-full max-w-56rem font-s-0_75 font-bold" style="color: #475569;">
         <div class="flex flex-col md:flex-row justify-between align-center gap-0_75rem">
-            <copyright> &copy; 2026 GhostMail. Secure Disposable Email Service.</copyright>
+            <copyright> &copy; 2026 GhostMail. Secure Temp-Mail Service.</copyright>
             <ul class="flex gap-0_5rem">
                 <li><a href="privacy.html">Privacy</a></li>|
-                <li><a href="terms.html">Terms</a></li>|
+                <li><a href="terms.html">T&C</a></li>|
                 <li><a href="credits.html">Credits</a></li>|
                 <li><a href="blogs/allarticles.html">Blogs</a></li>|
                 <li><a target="_blank" href="https://www.guerrillamail.com/GuerrillaMailAPI.html">API</a></li>

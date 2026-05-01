@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+Crawl-delay: 1
+
+Sitemap: /sitemap.xml

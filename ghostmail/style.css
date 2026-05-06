@@ -39,6 +39,7 @@ button, article, a, ul, .mail{
     text-decoration: none;
     color: inherit;
     list-style: none;
+    user-select: none;
 }
 
 button:active, a:active{
@@ -48,6 +49,8 @@ button:active, a:active{
 
 .flex{display: flex;}
 .flex-col{flex-direction: column;}
+
+.flex-grow-1{flex-grow: 1;}
 
 .grid{display: grid;}
 
@@ -77,21 +80,26 @@ button:active, a:active{
 .mb-1_5rem{margin-bottom: 1.5rem;}
 .mb-2rem{margin-bottom: 2rem;}
 
-.font-bold{font-weight: 700;}
+.font-bold, .mail-body a{font-weight: 700;}
 
 .font-s-0_75{font-size: 0.75rem !important;}
 .font-s-1_2{font-size: 1.2rem;}
+.font-s-1_25{font-size: 1.25rem;}
 
 .border{border: 1px solid;}
+.border2{border: 2px solid;}
+.bborder{border-bottom: 1px solid #ffffff0d;}
+.tborder{border-top: 1px solid #ffffff0d;}
 
 .curve-0_75rem{border-radius: 0.75rem;}
 
 .pos-relative{position: relative;}
 
 .color-grey, li:hover{color: #94a3b8;}
-.color-blue, i{color: #74c0fc;}
+.color-blue, i, .mail-body a{color: #74c0fc;}
 .color-dgrey{color: #64748b;}
 .color-white{color: #f1f5f9;}
+.color-lgrey{color: #ffffff0d;}
 
 .gap-0_5rem{gap: 0.5rem;}
 .gap-0_75rem{gap: 0.75rem;}
@@ -102,38 +110,22 @@ button:active, a:active{
 
 .jetbmono {font-family: 'JetBrains Mono', monospace;}
 
-.grid-cols-1 {grid-template-columns: repeat(1, minmax(0, 1fr));}
-
 .letter-space{letter-spacing: 0.05rem;}
 
 .hidden{display: none;}
 
-@media (min-width: 768px) {
-    .md\:col-span-2 {
-        grid-column: span 2 / span 2
-    }
+.grid-cols-1 {grid-template-columns: repeat(1, minmax(0, 1fr));}
 
-    .md\:row-span-2 {
-        grid-row: span 2 / span 2
-    }
-    
-    .md\:grid-cols-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr))
-    }
-    
-    .md\:flex-row {
-        flex-direction: row
-    }
-    
-    .md\:p-2rem {
-        padding: 2rem
-    }
-    
+@media (min-width: 768px) {
+    .md\:col-span-2 {grid-column: span 2 / span 2}
+    .md\:row-span-2 {grid-row: span 2 / span 2}
+    .md\:grid-cols-2 {grid-template-columns: repeat(2, minmax(0, 1fr))}
+    .md\:flex-row {flex-direction: row}
+    .md\:p-2rem {padding: 2rem}
     .md\:text-a {
         font-size: 1rem;
         line-height: 1.5rem
     }
-    
     .md\:text-b {
         font-size: 1.25rem;
         line-height: 1.75rem
@@ -141,44 +133,24 @@ button:active, a:active{
 }
 
 @media (min-width: 640px) {
-    .sm\:block {
-        display: block
-    }
-
-    .sm\:hidden {
-        display: none
-    }
+    .sm\:block {display: block}
+    .sm\:hidden {display: none}
 }
 
 /* Scrollbar styling */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
+::-webkit-scrollbar {width: 8px;}
+::-webkit-scrollbar-thumb:hover {background: #475569;}
 ::-webkit-scrollbar-thumb {
     background: #334155; 
     border-radius: 4px;
 }
-::-webkit-scrollbar-thumb:hover {
-    background: #475569; 
-}
 
 
-#inbox::-webkit-scrollbar {
-    width: 3px;
-}
-
-#inbox::-webkit-scrollbar-track {
-    background: transparent;
-}
-
+#inbox::-webkit-scrollbar {width: 3px;}
+#inbox::-webkit-scrollbar-track {background: transparent;}
 #inbox::-webkit-scrollbar-thumb {
     border-radius: 0;
     background: #475569;
-}
-
-.mail-body {
-    overflow-x: hidden;
 }
 
 .mail-body *{
@@ -186,12 +158,11 @@ button:active, a:active{
     max-width: 100% !important;
     box-sizing: border-box;
 }
-
+.mail-body {overflow-x: hidden;}
 .mail-body img {
     max-width: 100% !important;
     height: auto;
 }
-
 .mail-body pre {
     overflow-wrap: break-word;
     white-space: pre-wrap !important;

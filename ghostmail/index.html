@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Get a free temporary email instantly. Receive OTPs, view images, and avoid spam. No signup required with GhostMail.">
+    <meta name="keywords" content="temporary email, temp mail, disposable email, fake email, receive email online, temp email for otp">
+    <meta name="author" content="GhostMail">
+    <!-- VIEWPORT (MOBILE) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CANONICAL -->
+    <link rel="canonical" href="/ghostmail/">
+    <!-- ROBOTS -->
+    <meta name="robots" content="index, follow">
+    <!-- FAVICON (optional if you have one) -->
+    <link rel="icon" href="favicon.svg">
+    <!-- THEME COLOR (mobile UI color) -->
+    <meta name="theme-color" content="#0f172a">
+
     <script src="https://kit.fontawesome.com/2b2869e88a.js" crossorigin="anonymous"></script>
-    <title>GhostMail | Secure Disposable Email</title>
+    <title>GhostMail | Secure Temp-Mail Service</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="blogs/blog.css">
     <script src="script.js"></script>
@@ -25,31 +38,28 @@
         <div class="glass-panel p-1_5rem md:p-2rem mb-1_5rem">   
             <h2 class="letter-space flex color-grey font-bold font-s-0_75 align-center mb-0_75rem"><i class="fa-solid fa-quote-left"></i>&#8203; YOUR TEMPORARY E-MAIL &#8203;<i class="fa-solid fa-quote-right"></i></h2>
             <div class="flex flex-col mb-0_5rem md:flex-row gap-0_75rem">
-                <div class="flex curve-0_75rem" style="flex-grow: 1; border: 2px solid #ffffff0d;">
-                    <input id="emailInput" class="color-blue p-1rem w-full bg-dblue curve-0_75rem md:text-b jetbmono" style="font-size: 1.25rem;" readonly value="Boo....">
+                <div class="flex curve-0_75rem border2 flex-grow-1 color-lgrey">
+                    <input id="emailInput" class="color-blue p-1rem w-full bg-dblue curve-0_75rem md:text-b jetbmono font-s-1_25" readonly value="Boo....">
                 </div>
-                <button onclick="copyText()" class="flex bg-blue curve-0_75rem justify-center align-center" style="gap: 5px; padding: 1rem 2rem 1rem 2rem;">
-                    <i class="fa-regular fa-paste color-white" style="font-size: 1.25rem;"></i>
-                    <h3 class="jetbmono" style="font-size: 1.25rem;">COPY</h3>
+                <button onclick="copyText()" class="flex bg-blue curve-0_75rem justify-center align-center" style="padding: 1rem 2rem 1rem 2rem;">
+                    <i class="fa-regular fa-paste color-white font-s-1_25"></i>&nbsp; 
+                    <h3 class="jetbmono font-s-1_25">COPY</h3>
                 </button>
             </div>
         </div>
 
-
         <div class="glass-panel overflow-hidden mb-1_5rem">
-            <div class="flex justify-between align-center p-1_5rem" style="border-bottom:1px solid #ffffff0d;">
+            <div class="flex justify-between align-center p-1_5rem bborder">
                 <h2 class="font-bold letter-space font-s-0_75 flex align-center jetbmono">
                     <i class="fa-solid fa-inbox color-blue"></i> &#8203; INBOX
                 </h2>
                 <span id="msg-count" class="font-s-0_75 card-blue card font-bold">0</span>
             </div>
-
             <div id="inbox" class="h-22rem overflowY-auto"></div>
-
-            <div class="flex p-1rem justify-between" style="border-top:1px solid #ffffff0d;"></div>
+            <div class="flex p-1rem justify-between tborder"></div>
         </div>
 
-        <a onclick="newEmail()" class="flex border curve-0_75rem p-1rem mb-1rem font-bold align-center justify-center" style="border-color: brown; color: brown;">Summon New Ghost</a>
+        <a onclick="newEmail()" class="flex curve-0_75rem p-1rem mb-1rem align-center justify-center card-blue">Summon New Ghost</a>
 
         <p class="flex glass-card justify-center align-center mb-1rem height-5rem"> AD SPACE</p>
 

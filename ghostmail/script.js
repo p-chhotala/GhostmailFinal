@@ -313,3 +313,13 @@ window.onload = async () => {
         window.inboxInterval = setInterval(getInbox, 5000);
     }, 1500);
 };
+
+function manualRefresh() {
+    console.log("🔄 Manual refresh triggered");
+
+    // clear cache so it updates instantly
+    lastInboxHTML = "";
+
+    // fetch immediately
+    getInbox();
+}
